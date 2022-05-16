@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Architecture index</title>
@@ -12,11 +13,12 @@
         <%- include ('./partials/header.ejs') %>
     </header>
     <div class="container">
+        <h1><%=architecture.title%></h1>
         <ul>
           <% for (let i = 0; i < architecture.length; i++){ %>
-            <div class="<%=architecture[i].id%> architectures">
+            <div class="<%=architecture[i]._id%> architecture">
             <li>
-              <h3><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].architect%></a></h3>
+            <h3><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].title%></a></h3>
             </li>
             <form action="/architecture/<%=architecture[i]._id%>?_method=DELETE"  method="POST">
               <input type="submit"  value="Delete">

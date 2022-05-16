@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include ('./partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include ('./partials/header.ejs') %>
+    </header>
+    <h1>Workout Modification Page</h1>
+    <form  action="/architecture/<%=architecture._id%>?_method=PUT" method="POST">
+    Title of building: <input type="text" name="title" value="<%=architecture.title%>" required><br>
+    <br>
+    Name of architect: <input type="text" name="architect" value="<%=architecture.architect%>" required><br>
+    <br>
+  <!-- Difficulty: <input type="text" name="" value="" required><br>
+    <br>
+    Time: <input type="text" name="" value="" required><br>
+    <br>
+    Sets: <input type="text" name="" value="" required><br>
+    <br>
+    Reps: <input type="text" name="" value="" required><br>
+    <br>
+    Frequency: <input type="text" name="" value="" required><br> -->
+    <br>
+    <input type="submit" value="Submit Edit"><br>
+</form>
+    
+</body>
+</html>

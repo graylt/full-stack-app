@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -14,9 +15,9 @@
     <h1>New architecture</h1>
     <br>
 <form action="/architecture" method="POST">
-<input type="radio" id="over-night" name="dayVisit" value="HTML">
+<input type="radio" id="day-visit" name="dayVisit" value="Day visit">
 <label for="overnight">Day visit</label><br>
-<input type="radio" id="day-visit" name="overNight" value="CSS">
+<input type="radio" id="over-night" name="overNight" value="Overnight stay">
 <label for="day-visit">Overnight stay</label><br>
 
 <br>
@@ -24,9 +25,9 @@ Building name: <input type="text" name="title" required>
 <br>
 Architect: <input type="text" name="architect" required>
 <br>
-Year: <input type="text" name="year" required>
+Year: <input type="text" name="year" >
 <br>
-img: <input type="image" name="img" required>
+img: <input type="image" name="img">
 <form class="box" method="post" action="" enctype="multipart/form-data">
     <div class="box__input">
       <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
@@ -39,19 +40,18 @@ img: <input type="image" name="img" required>
   </form>
   
 <br>
-loc: <input type="text" name="architecture.loc.streetAddress" required><br>
-loc: <input type="text" name="architecture.;oc.city" required><br>
-loc: <input type="text" name="architecture.loc.city" required><br>
-loc: <input type="text" name="architecture.loc.state" required><br>
-loc: <input type="text" name="architecture.loc.postalCode" required><br>
-loc: <input type="text" name="architecture.loc.country" required><br>
+loc: <input type="text" name="architecture.loc.streetAddress"><br>
+loc: <input type="text" name="architecture.loc.city"><br>
+loc: <input type="text" name="architecture.loc.state"><br>
+loc: <input type="text" name="architecture.loc.postalCode"><br>
+loc: <input type="text" name="architecture.loc.country"><br>
 
 <br>
 <label for="">Add link:</label>
 <input type="url" name="link">
 
 <input type="submit" value="Add new architecture">
-<input type="reset">
+<button  class="btn waves-effect waves-light red" type="reset" value="Reset" > Reset </button>
 </form>
 
     
@@ -59,4 +59,3 @@ loc: <input type="text" name="architecture.loc.country" required><br>
 </html>
 
 
-<!-- drop image: https://css-tricks.com/drag-and-drop-file-uploading/ -->

@@ -62,7 +62,7 @@ app.put('/architecture/:id', (req,res) => {
   // 3. new 
   app.get('/architecture/new', (req,res) => {
     res.render('new.ejs', {
-    tabTitle: 'new'
+        tabTitle: 'add new'
     })
 })
   
@@ -84,6 +84,7 @@ app.put('/architecture/:id', (req,res) => {
   app.get('/architecture/:id/edit', (req,res) => {
     Schema.findById(req.params.id, (err, foundArchitecture) => {
       res.render('edit.ejs', {
+        tabTitle: 'edit architecture',
         architecture: foundArchitecture
       })
     })
@@ -103,7 +104,7 @@ app.put('/architecture/:id', (req,res) => {
 app.get('/architecture/:id', (req,res) => {
     Schema.findById(req.params.id, (err,foundArchitecture) => {
       res.render('show.ejs', {
-        tabTitle: 'show',
+        tabTitle: 'architecture details',
         architecture: foundArchitecture
       })
     })
