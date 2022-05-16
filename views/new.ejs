@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include ('./partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <%- include ('./partials/header.ejs') %>
+    </header>
+    <h1>New architecture</h1>
+    <br>
+<form action="/architecture" method="POST">
+<input type="radio" id="over-night" name="dayVisit" value="HTML">
+<label for="overnight">Day visit</label><br>
+<input type="radio" id="day-visit" name="overNight" value="CSS">
+<label for="day-visit">Overnight stay</label><br>
+
+<br>
+Building name: <input type="text" name="title" required>
+<br>
+Architect: <input type="text" name="architect" required>
+<br>
+Year: <input type="text" name="year" required>
+<br>
+img: <input type="image" name="img" required>
+<form class="box" method="post" action="" enctype="multipart/form-data">
+    <div class="box__input">
+      <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+      <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+      <button class="box__button" type="submit">Upload</button>
+    </div>
+    <div class="box__uploading">Uploading…</div>
+    <div class="box__success">Done!</div>
+    <div class="box__error">Error! <span></span>.</div>
+  </form>
+  
+<br>
+loc: <input type="text" name="architecture.loc.streetAddress" required><br>
+loc: <input type="text" name="architecture.;oc.city" required><br>
+loc: <input type="text" name="architecture.loc.city" required><br>
+loc: <input type="text" name="architecture.loc.state" required><br>
+loc: <input type="text" name="architecture.loc.postalCode" required><br>
+loc: <input type="text" name="architecture.loc.country" required><br>
+
+<br>
+<label for="">Add link:</label>
+<input type="url" name="link">
+
+<input type="submit" value="Add new architecture">
+<input type="reset">
+</form>
+
+    
+</body>
+</html>
+
+
+<!-- drop image: https://css-tricks.com/drag-and-drop-file-uploading/ -->
