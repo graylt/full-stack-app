@@ -111,7 +111,7 @@ app.get('/architecture/:id', (req,res) => {
   })
 
 //1. index
-app.get('/architecture', (req, res)=>{
+app.get('/', (req, res)=>{
     Schema.find({}, (err, allArchitecture) => {
         res.render('index.ejs', {
             tabTitle: 'Home',
