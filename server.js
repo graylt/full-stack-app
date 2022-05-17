@@ -52,6 +52,13 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //   res.send('Hello World!');
 // });
 
+  // 3. new 
+  app.get('/architecture/new', (req,res) => {
+    res.render('new.ejs', {
+    tabTitle: 'add new'
+  })
+})
+
 // 7. put
 app.put('/architecture/:id', (req,res) => {
     Schema.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err,updatedModel) => {
@@ -59,14 +66,9 @@ app.put('/architecture/:id', (req,res) => {
     })
   })
   
-  // 3. new 
-  app.get('/architecture/new', (req,res) => {
-    res.render('new.ejs', {
-        tabTitle: 'add new'
-    })
-})
-  
-  // 4. post
+
+
+ // 4. post
   app.post('/architecture', (req,res) => {
     Schema.create(req.body, (err, createdSchema) => {
       res.redirect('/architecture')
@@ -91,14 +93,13 @@ app.put('/architecture/:id', (req,res) => {
   })
 
 //00. seed data
-// app.get('/architecture/seed', (req, res) => {
-//     Schema.create(architectureSeed, (err, seedData) => {
-//         console.log(seedData)
-//   res.redirect('/architecture')
-// })
-// })
-
-
+app.get('/architecture/seed', (req, res) => {
+    Schema.create(architectureSeed, (err, seedData) => {
+        console.log(seedData)
+  res.redirect('/architecture')
+})
+})
+ 
 
 //2. show
 app.get('/architecture/:id', (req,res) => {
@@ -110,8 +111,18 @@ app.get('/architecture/:id', (req,res) => {
     })
   })
 
+// geo-spatial index
+// Schema.indexes({"": "2dsphere"});
+
+
 //1. index
-app.get('/', (req, res)=>{
+// redirect for heroku
+app.get ('/', (req, res) => {
+    res.redirect('/index');
+});
+
+//route for localhost
+app.get('/architecture', (req, res)=>{
     Schema.find({}, (err, allArchitecture) => {
         res.render('index.ejs', {
             tabTitle: 'Home',

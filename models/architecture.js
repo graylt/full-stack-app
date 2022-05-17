@@ -19,21 +19,24 @@
 module.exports = [
 
 {
-    dayVisit: false,
-    overNight: true,
-    title: "Maison du Brésil",
-    architect: "Le Corbusier",
+    
+    title: "Maison La Roche",
+    architectOne: "Le Corbusier",
+    architectTwo: "Pierre Jeanneret",
     year: "1953-59",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Brazil_house_CIUP_picture_2019-09-02.jpg/2560px-Brazil_house_CIUP_picture_2019-09-02.jpg",
+    img: "https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Villa_La_Roche_2013.jpg/2560px-Villa_La_Roche_2013.jpg",
     loc: { 
-        streetAddress: "Cité Internationale Universitaire de Paris 7L Boulevard Jourdan", 
+        streetAddress: "8-10 Square du Docteur-Blanche", 
         city: "Paris", 
-        postalCode: 75014, 
+        postalCode: 75016, 
         country: "France"
     },
-    link: "maisondubresil.org"
+    link: "foundationlecorbusier.fr",
+    dayVisit: "true"
 }
 ]
+
+
 
 // {
 

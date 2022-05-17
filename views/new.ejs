@@ -10,49 +10,59 @@
 </head>
 <body>
     <header>
-        <%- include ('./partials/header.ejs') %>
+      <%- include ('./partials/header.ejs') %>
     </header>
     <h1>New architecture</h1>
     <br>
 <form action="/architecture" method="POST">
-<input type="radio" id="day-visit" name="dayVisit" value="Day visit">
+  
+    Id: <input type="text" name="title"><br>
+    Name: <input type="text" name="architect"><br>
+    Image: <input type="url" id="image" placeholder="https://image-address-here.com"
+    pattern="https://.*" size="32"name="img"><br>
+    
+    Type: <input type="text" name="loc.city"><br>
+    Stats: <input type="text" name="loc.country"><br>
+    Damages: <input type="text" name="loc.postalcode"><br>
+    <input type="submit" value="Create"><br>
+    </form>
+
+<!-- <input type="checkbox" id="day-visit" name="dayVisit">
 <label for="overnight">Day visit</label><br>
-<input type="radio" id="over-night" name="overNight" value="Overnight stay">
+<input type="checkbox" id="over-night" name="overNight">
 <label for="day-visit">Overnight stay</label><br>
 
 <br>
-Building name: <input type="text" name="title" required>
+<input type="text" name="title" placeholder="Title"required> 
 <br>
-Architect: <input type="text" name="architect" required>
+<input type="text" name="architect" placeholder="Architect" required>
 <br>
-Year: <input type="text" name="year" >
+<input type="text" name="year">
 <br>
-img: <input type="image" name="img">
-<form class="box" method="post" action="" enctype="multipart/form-data">
-    <div class="box__input">
-      <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
-      <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
-      <button class="box__button" type="submit">Upload</button>
-    </div>
-    <div class="box__uploading">Uploading…</div>
-    <div class="box__success">Done!</div>
-    <div class="box__error">Error! <span></span>.</div>
-  </form>
+<label for="img">Upload an image</label>
+<input type="file" name="img">
+
   
 <br>
-loc: <input type="text" name="architecture.loc.streetAddress"><br>
-loc: <input type="text" name="architecture.loc.city"><br>
-loc: <input type="text" name="architecture.loc.state"><br>
-loc: <input type="text" name="architecture.loc.postalCode"><br>
-loc: <input type="text" name="architecture.loc.country"><br>
-
+<input type="text" name="architecture.loc.streetAddress" placeholder="Street address">
 <br>
-<label for="">Add link:</label>
-<input type="url" name="link">
+<input type="text" name="architecture.loc.city" placeholder="City">
+<br>
+<input type="text" name="architecture.loc.state" placeholder="State">
+<br>
+<input type="text" name="architecture.loc.postalCode" placeholder="Postal code">
+<br>
+<input type="text" name="architecture.loc.country" placeholder="Country">
+<br>
+<input type="url" name="link" placeholder="https://website.com"
+pattern="https://.*" size="32"></br><br>
+
 
 <input type="submit" value="Add new architecture">
-<button  class="btn waves-effect waves-light red" type="reset" value="Reset" > Reset </button>
+<button  type="reset"> Reset </button>
 </form>
+<br>
+<textarea name="notes" id="" cols="30" rows="10" placeholder="Note:"></textarea><br> -->
 
     
 </body>

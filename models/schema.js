@@ -1,18 +1,23 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
 const architectureSchema = new Schema ({
 
-    dayVisit: {type: Boolean},
-    overNight: {type: Boolean},
     title: {type: String, required:true},
-    architect: {type: String, required: true},
-    year: String,
-    img: {type: String},
+    architectOne: {type: String, required: true},
+    architectTwo: {type: String, required: true},
+    year: {type:String},
+    img: [{type: String}],
     loc: {streetAddress: String, city: String, state: String, postalCode: Number, country: String},
-    link: {type: String}
+    link: {type: String},
+    dayVisit: {type: Boolean},
+    overNight: {type: Boolean}
 })
+
+
     
-const serverCollection = mongoose.model('architecture', architectureSchema);
-module.exports = serverCollection;
+const Architecture = mongoose.model('Architecture', architectureSchema);
+module.exports = Architecture;
+
 

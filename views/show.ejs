@@ -8,6 +8,7 @@
     <title>Architecture index</title>
     <%- include ('./partials/head.ejs') %>
 </head>
+
 <body>
     <header>
         <%- include ('./partials/header.ejs') %>
@@ -17,19 +18,21 @@
           <button type="button" name="button" class = "button"><a class="text" href="/architecture">Go Back</a></button>
         </nav>
         <h1>Architecture</h1>
-        <h1> <%= architecture.title %> </h1>
-        <h2>Target body part: <%=architecture.overNight%></h2>
+        <%=architecture.title%>
+        <h2>Target body part: <%=architecture.dayVisit%></h2>
     
-          <h3><%=architecture.architect%></h3>
+          <h3><%=architecture.architectOne%></h3>
+          <h3><%=architecture.architectTwo%></h3>
             <h3>a: <%=architecture.year%></h3>
-            <h3>b: <%=architecture.img%></h3>
-            <h3>c: <%=architecture.loc.streetAddress%></h3>
+            <img class="show-img" src=" <%=architecture.img%>">
+            <h3>c:<a> <%=architecture.loc.streetAddress%></a></h3>
             <h3>d: <%=architecture.loc.city%></h3>
             <h3>e: <%=architecture.loc.postalCode%></h3>
             <h3>f: <%=architecture.loc.country%></h3>
           
-            <h3>g: <%=architecture.link%></h3>
+            <h3><a href="url"><%=architecture.link%></a></h3>
       </div>
+      
   
     
 </body>
