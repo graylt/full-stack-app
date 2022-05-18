@@ -19,9 +19,14 @@
         <ul>
           <% for (let i = 0; i < architecture.length; i++){ %>
             <div class="<%=architecture[i]._id%> architecture">
+
             <li>
-            <h3><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].title%></a></h3>
-            </li>
+                <a href="/architecture/<%=architecture[i]._id%>"><img src="<%=architecture[i].img%>"></a>
+                    <h3><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].title%></a></h3>
+                        <h2><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].architectOne%></a></h2>
+            
+
+
             <form action="/architecture/<%=architecture[i]._id%>?_method=DELETE"  method="POST">
               <input type="submit"  value="Delete">
             </form>
@@ -30,10 +35,13 @@
             </form>
             </div>
           <%}%>
+        </li>
         </ul>
-        <form action="/architecture/new">
+
+
+        <!-- <form action="/architecture/new">
           <button>Create New architecture</button>
-        </form>
+        </form> -->
     </div>
 
     

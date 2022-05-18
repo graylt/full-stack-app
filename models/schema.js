@@ -6,7 +6,7 @@ const architectureSchema = new Schema ({
 
     title: {type: String, required:true},
     architectOne: {type: String, required: true},
-    architectTwo: {type: String, required: true},
+    architectTwo: {type: String},
     year: {type:String},
     img: [{type: String}],
     loc: {streetAddress: String, city: String, state: String, postalCode: Number, country: String},

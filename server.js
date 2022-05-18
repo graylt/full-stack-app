@@ -35,6 +35,9 @@ mongoose.connect(MONGODB_URI, () => {
 
 //use public folder for static assets
 app.use(express.static('public'));
+app.use('/images', express.static('images'));
+app.use('/grid.png', express.static('images/grid.png'));
+
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
@@ -93,12 +96,12 @@ app.put('/architecture/:id', (req,res) => {
   })
 
 //00. seed data
-app.get('/architecture/seed', (req, res) => {
-    Schema.create(architectureSeed, (err, seedData) => {
-        console.log(seedData)
-  res.redirect('/architecture')
-})
-})
+// app.get('/architecture/seed', (req, res) => {
+//     Schema.create(architectureSeed, (err, seedData) => {
+//         console.log(seedData)
+//   res.redirect('/architecture')
+// })
+// })
  
 
 //2. show
