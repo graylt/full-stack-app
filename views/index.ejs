@@ -5,54 +5,34 @@
     <link rel="stylesheet" href="/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0645959aac.js" crossorigin="anonymous"></script>
     <title>Architecture index</title>
 <%- include ('./partials/head.ejs') %>
 </head>
-</script>
 <body>
-    
+    <div class="w">
     <header>
         <%- include ('./partials/header.ejs') %>
     </header>
-    <div class="container">
+    <div class="content-container">
         <h1><%=architecture.title%></h1>
         <ul>
           <% for (let i = 0; i < architecture.length; i++){ %>
             <div class="<%=architecture[i]._id%> architecture">
-
             <li>
                 <a href="/architecture/<%=architecture[i]._id%>"><img src="<%=architecture[i].img%>"></a>
                     <h3><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].title%></a></h3>
                         <h2><a href="/architecture/<%=architecture[i]._id%>"><%=architecture[i].architectOne%></a></h2>
-            
-
-
-            <form action="/architecture/<%=architecture[i]._id%>?_method=DELETE"  method="POST">
-              <input type="submit"  value="Delete">
-            </form>
-            <form action="/architecture/<%=architecture[i]._id%>/edit">
-              <button>Edit</button>
-            </form>
-            </div>
-          <%}%>
+        <form class="edit-content" action="/architecture/<%=architecture[i]._id%>?_method=DELETE"  method="POST">
+            <!-- <input type="submit"  value="Delete"> -->
+            <button class="delete-button" style="font-size:16px;">&#10005;</button>
+          </form>
+          <button class="edit-anchor"><a href="/architecture/<%=architecture[i]._id%>/edit">&#9998;</a></button>
         </li>
-        </ul>
-
-
-        <!-- <form action="/architecture/new">
-          <button>Create New architecture</button>
-        </form> -->
-    </div>
-
-    
-
-        
-
-            </script>
-        
-
-  
-    
-</body>
+        </div>
+          <%}%>
+    </ul>
+        </div>
+    </body>
 </html>
 

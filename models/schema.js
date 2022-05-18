@@ -9,10 +9,11 @@ const architectureSchema = new Schema ({
     architectTwo: {type: String},
     year: {type:String},
     img: [{type: String}],
-    loc: {streetAddress: String, city: String, state: String, postalCode: Number, country: String},
+    loc: {streetAddress: String, city: String, state: String, postalCode: String, country: String},
     link: {type: String},
     dayVisit: {type: Boolean},
-    overNight: {type: Boolean}
+    overNight: {type: Boolean},
+    Note: {type: String}
 })
 
 

@@ -36,7 +36,7 @@ mongoose.connect(MONGODB_URI, () => {
 //use public folder for static assets
 app.use(express.static('public'));
 app.use('/images', express.static('images'));
-app.use('/grid.png', express.static('images/grid.png'));
+// app.use('/grid.png', express.static('images/grid.png'));
 
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
@@ -121,7 +121,8 @@ app.get('/architecture/:id', (req,res) => {
 //1. index
 // redirect for heroku
 app.get ('/', (req, res) => {
-    res.redirect('/index');
+    // res.redirect('/index');
+    res.redirect('/architecture');
 });
 
 //route for localhost

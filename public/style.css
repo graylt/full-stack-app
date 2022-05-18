@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 
 body { 
   margin: 0; 
@@ -9,31 +12,75 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: auto(8, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: 
+  "header header header header header header header header"
+  "footer footer footer footer footer footer footer footer"; 
+  gap: 24px;
+
+} 
+
+
+header {
+  display: grid;
+  grid-area: header;
+  background-color: white;
+
 }
 
-.container {
-  display: flex;
-  grid-template-columns: 1;
+.content-container {
+  margin-top: 32px;
+  display: grid;
+  flex-wrap: wrap;
+}
 
+.edit-content {
+  padding-right: 24px;
+}
+
+.edit-button {
+  font-family: 'Syne', sans-serif;
+  background-color: none;
+  background: none;
+  border: none;
+  align-self: center;
+}
+
+form {
+  display: inline;
+}
+
+.architecture {
+  display: grid;
+  flex-direction: row;
 }
 
 .nav-bar-container {
-  background-color: white;
-  grid-column-start: 1 span 8;
-  grid-template-rows: 1;
-  position: sticky;
-  height: 100px;
-}
-.nav-link-wrapper {
-  display: inline;
+  display: flex;
+  flex-direction: row;
   justify-content: end;
+  /* justify-items: stretch; */
+  background-color: white;
+  /* grid-column-start: 8;
+  grid-column-end: 8; */
+  grid-row: 1;
+  position: sticky;
+  height: 80px;
+  margin-bottom: 24px;
+}
+
+.nav-link-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  float: right;
   margin: 24px;
+  align-content: space-around;
+  justify-content: center;
 }
 .nav-link {
-  display: inline;
-  float: right;
+  display: flex;
+  justify-content: center;
   margin: 24px;
 }
 
@@ -44,8 +91,17 @@ img {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  /* grid-row: 2; */
+  flex-wrap: wrap;
+  width: 1fr;
+  overflow: hidden;
+  /* width: 100px; */
 }
+
 
 a {
   text-decoration: none;
@@ -62,6 +118,67 @@ a {
   height: 56px;
   width: 56px;
   align-content: center;
+  cursor: crosshair;
 }
+
+.delete-button {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: none;
+  cursor: crosshair;
+  padding-left: 0;
+  color: rgb(78, 78, 78);
+}
+
+.delete-button:hover {
+  color: red;
+  transform: scale(1.5);
+}
+
+/* .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+} */
+
+.edit-anchor {
+  padding: 0;
+  justify-content: center;
+  font-size: 16px;
+  color: rgb(78, 78, 78);
+  background: none;
+  border: none;
+  cursor: crosshair;
+}
+
+.edit-anchor:hover {
+  transform: scale(1.5);
+}
+
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
 
 
