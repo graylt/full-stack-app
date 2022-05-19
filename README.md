@@ -2,7 +2,7 @@
 
 # Full Stack App
 
-An app to help 
+An app to keep track of architecture findings and places you have visited 
 
 
 ##### App Link: 
@@ -42,8 +42,8 @@ Adhered to the MVC file structure: Models, Views and Controllers
 4. Footer
 
 ### Resources: 
-W3 Schools
-CSS Tricks
+W3 Schools,
+CSS Tricks,
 Mapbox
 
 ### Imprint: 
