@@ -13,7 +13,8 @@ module.exports = [
         country: "France"
     },
     link: "foundationlecorbusier.fr",
-    dayVisit: "true"
+    dayTag: "☀", 
+    visits: 1
 },
 {
     title: "Sainte-Marie de La Tourette",
@@ -27,8 +28,8 @@ module.exports = [
         country: "France"
     },
     link: "couventdelatourette.fr",
-    dayVisit: "true",
-    overNight: "true"
+    dayTag: "☀",
+    nightTag: "🛏"
 },
 {
     title: "E-1027 & Le Cabanon",
@@ -43,7 +44,7 @@ module.exports = [
         country: "France"
     },
     link: "capmoderne.com",
-    dayVisit: "true",
-    overNight: "true"
+    dayTag: "☀",
+    nightTag: "🛏"
 }
 ]

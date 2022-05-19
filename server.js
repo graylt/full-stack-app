@@ -55,10 +55,33 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //   res.send('Hello World!');
 // });
 
+//1. index
+// redirect for heroku
+app.get ('/', (req, res) => {
+    // res.redirect('/index');
+    res.redirect('/architecture');
+});
+
+//route for localhost
+app.get('/architecture', (req, res)=>{
+    Schema.find({}, (err, allArchitecture) => {
+        let numOfVisits = 0;
+        for (let item of allArchitecture) {
+            numOfVisits += item.visits
+        }
+        res.render('index.ejs', {
+            architecture: allArchitecture,
+            numOfVisits: numOfVisits,
+            tabTitle: 'Home'
+            // res.send('index.ejs');
+        });
+    });
+ });
+
   // 3. new 
   app.get('/architecture/new', (req,res) => {
     res.render('new.ejs', {
-    tabTitle: 'add new'
+    tabTitle: 'Add new architecture'
   })
 })
 
@@ -69,8 +92,6 @@ app.put('/architecture/:id', (req,res) => {
     })
   })
   
-
-
  // 4. post
   app.post('/architecture', (req,res) => {
     Schema.create(req.body, (err, createdSchema) => {
@@ -89,8 +110,8 @@ app.put('/architecture/:id', (req,res) => {
   app.get('/architecture/:id/edit', (req,res) => {
     Schema.findById(req.params.id, (err, foundArchitecture) => {
       res.render('edit.ejs', {
-        tabTitle: 'edit architecture',
-        architecture: foundArchitecture
+        architecture: foundArchitecture,
+        tabTitle: 'Edit architecture'
       })
     })
   })
@@ -102,39 +123,17 @@ app.put('/architecture/:id', (req,res) => {
 //   res.redirect('/architecture')
 // })
 // })
- 
 
 //2. show
 app.get('/architecture/:id', (req,res) => {
-    Schema.findById(req.params.id, (err,foundArchitecture) => {
+    Schema.findById(req.params.id, (err,foundArchitecture) => { 
       res.render('show.ejs', {
-        tabTitle: 'architecture details',
+        tabTitle: 'Architecture details',
         architecture: foundArchitecture
+        // tags:foundArchitecture
       })
     })
-  })
-
-// geo-spatial index
-// Schema.indexes({"": "2dsphere"});
-
-
-//1. index
-// redirect for heroku
-app.get ('/', (req, res) => {
-    // res.redirect('/index');
-    res.redirect('/architecture');
-});
-
-//route for localhost
-app.get('/architecture', (req, res)=>{
-    Schema.find({}, (err, allArchitecture) => {
-        res.render('index.ejs', {
-            tabTitle: 'Home',
-            // res.send('index.ejs');
-        architecture: allArchitecture
-        });
-    });
- });
+})
 
  // Error / success
 // db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
