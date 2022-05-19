@@ -59,7 +59,7 @@ User story + target audience:
 
 **She needs a way to compile and access all of her unique findings.**
 
-######Targeted audience:
+###### Targeted audience:
 sightseers
 preservationists
 architects
