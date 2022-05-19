@@ -38,15 +38,36 @@ Adhered to the MVC file structure: Models, Views and Controllers
 
 1. Add a way to filter/sort
 2. Add search
-3. Continue to add image sources
+3. Add info page to show image sources etc.
 4. Footer
 
 ### Resources: 
-W3 Schools,
-CSS Tricks,
-Mapbox
+1. W3 Schools
+2. CSS Tricks
+3. Mapbox
+4. Router class notes + Medium for this user authentication turtorial - https://betterprogramming.pub/build-an-authentication-api-with-node-express-and-mongodb-112b448c21f2 
 
 ### Imprint: 
 
 All images are from Wikipedia
+
+### Appendix: 
+
+User story + target audience:
+
+Charolotte, fascinated with architecture...
+
+She needs a way to compile and access all of her unique findings.
+
+Targeted audience:
+sightseers
+preservationists
+architects
+homeowners
+cultural institutions
+
+Wireframes: 
+
+![Screenshot](crud-wireframes.png)
+
 

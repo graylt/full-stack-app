@@ -11,6 +11,29 @@ const architectureSeed = require('./models/architecture.js');
 
 require('dotenv').config()
 
+//___________________
+//User Authenticaion
+//___________________
+
+// const unless = require('express-unless');
+// const auth = require('./helpers/jwt.js');
+// const users = require('../controllers/userController.js');
+// const errors = require('./helpers/errorHandler.js');
+
+// const userController = require('../controllers/userController.js');
+// app.use('/', userController);
+
+// auth.authenticateToken.unless = unless
+// app.use(auth.authenticateToken.unless({
+//     path: [
+//         { url: '/users/login', methods: ['POST']},
+//         { url: '/users/register', methods: ['POST']}
+//     ]
+// }));
+
+// app.use('/users', users);
+
+// app.use(errors.errorHandler);
 
 //___________________
 //Port
@@ -38,8 +61,9 @@ mongoose.connect(MONGODB_URI, () => {
 
 //use public folder for static assets
 app.use(express.static('public'));
+
 app.use('/images', express.static('images'));
-// app.use('/grid.png', express.static('images/grid.png'));
+app.use('/grid.png', express.static('../images/grid.png'));
 
 
 
