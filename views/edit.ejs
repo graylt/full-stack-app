@@ -20,27 +20,41 @@
         <li>
           <h1>Edit Architecture</h1>
           <br>
-          <form  action="/architecture/<%=architecture._id%>?_method=PUT" method="POST">
-        <label for="dayTag">Day visit</label><br>
+        <form  action="/architecture/<%=architecture._id%>?_method=PUT" method="POST">
+        <label>Day visit</label><br>
         <span style='font-size: 48px;'>☀</span><br>
         <br>
-        <label for="dayTag">Overnight stay</label><br>
+        <label>Overnight stay</label><br>
         <span style='font-size: 48px;'>🛏</span><br>
         <br>
-        <input class="edit-input" type="text" name="dayTag" value="<%architecture.dayTag%>" placeholder="Paste day visit emoji here"><br>
-        <input class="edit-input" type="text" name="nightTag" value="<%architecture.dayTag%>" placeholder="Paste overnight stay emoji here"><br>
-        <input class="edit-input" type="text" name="title" value="<%architecture.title%>" placeholder="Name of building or site"><br>
-        <input class="edit-input" type="text" name="architectOne" value="<%architecture.architectOne%>" placeholder="Name of Architect"><br>
-        <input type="text" class="edit-input" name="architectTwo" value="<%architecture.architectTwo%>" placeholder="Add Another Architect"><br>
-        <input type="text" class="edit-input" name="year" value="<%architecture.year%>" placeholder="Year"><br>
-        <input type="url" class="edit-input" pattern="https://.*" name="img" value="<%architecture.img%>" placeholder="https://www.copy-image-address.com/"><br>
-        <input type="text" class="edit-input" name="streetAddress" value="<%architecture.loc.streetAddress%>" placeholder="Street address"><br>
-        <input type="text" class="edit-input" name="city" value="<%architecture.loc.city%>" placeholder="City"><br>
-        <input type="text" class="edit-input" name="state" value="<%architecture.loc.state%>" placeholder="State"><br>
-        <input type="text" class="edit-input" name="postalCode" value="<%architecture.loc.postalCode%>" placeholder="Postcode"><br>
-        <input type="text" class="edit-input" name="country" value="<%architecture.loc.country%>" placeholder="Country"><br>
-        <input type="url" class="edit-input" name="link" value="<%architecture.loc.link%>" placeholder="http://www.architecture-site.com"><br>
-        <input type="number" class="edit-input" name="visits" value="<%architecture.visits%>" placeholder="Number of times visited"><br>
+        <input type="text" class="edit-input" name="dayTag" value="<%=architecture.dayTag%>" placeholder="Paste day visit emoji here">
+        <br>
+        <input type="text" class="edit-input" name="nightTag" value="<%=architecture.nightTag%>" placeholder="Paste overnight stay emoji here">
+        <br>
+        <input type="text" class="edit-input" name="title" value="<%=architecture.title%>" placeholder="Name of building or site">
+        <br>
+        <input type="text" class="edit-input" name="architectOne" value="<%=architecture.architectOne%>" placeholder="Name of Architect">
+        <br>
+        <input type="text" class="edit-input" name="architectTwo" value="<%=architecture.architectTwo%>" placeholder="Add Another Architect">
+        <br>
+        <input type="text" class="edit-input" name="year" value="<%=architecture.year%>" placeholder="Year">
+        <br>
+        <input type="url" class="edit-input" pattern="https://.*" name="img" value="<%=architecture.img%>" placeholder="https://www.copy-image-address.com/">
+        <br>
+        <input type="text" class="edit-input" name="loc.streetAddress" value="<%=architecture.loc.streetAddress%>" placeholder="Street address">
+        <br>
+        <input type="text" class="edit-input" name="loc.city" value="<%=architecture.loc.city%>" placeholder="City">
+        <br>
+        <input type="text" class="edit-input" name="loc.state" placeholder="State" value="<%=architecture.loc.state%>">
+        <br>
+        <input type="text" class="edit-input" name="loc.postalCode" value="<%=architecture.loc.postalCode%>" placeholder="Postcode">
+        <br>
+        <input type="text" class="edit-input" name="loc.country" value="<%=architecture.loc.country%>" placeholder="Country">
+        <br>
+        <input type="url" class="edit-input" name="link" value="<%=architecture.link%>" placeholder="http://www.architecture-site.com">
+        <br>
+        <input type="number" class="edit-input" name="visits" value="<%=architecture.visits%>" placeholder="Number of times visited">
+        <br>
         <input type="submit" class="edit-submit" value="Submit">
       </form>
         </li>

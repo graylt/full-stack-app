@@ -74,5 +74,19 @@ module.exports = [
     },
     link: "fondoambiente.it",
     dayTag: "☀"
+},
+{
+    title: "Finn Juhl House",
+    architectOne: "Finn Juhl",
+    year: "1942",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Finn_Juhls_hus_01.JPG/2880px-Finn_Juhls_hus_01.jpg",
+    loc: { 
+        streetAddress: "15 Kratvaenget", 
+        city: "Charlottenlund", 
+        postalCode: "2920",
+        country: "Denmark"
+    },
+    link: "ordrupgaard.dk",
+    dayTag: "☀"
 }
 ]
