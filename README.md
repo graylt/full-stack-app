@@ -32,12 +32,14 @@ Adhered to the MVC file structure: Models, Views and Controllers
 3. Responsiveness
 4. Image drop/upload feature
 5. Visit counter displaying number of sites visited on the home screen
+6. Favicon to display on all pages
 
 ### Next steps: 
 
 1. Add a way to filter/sort
 2. Add search
 3. Continue to add image sources
+4. Footer
 
 ### Resources: 
 W3 Schools
