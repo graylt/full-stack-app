@@ -81,6 +81,10 @@ header {
   cursor: crosshair;
 }
 
+.new-button:hover {
+  transform: scale(1.5);
+}
+
 /* CONTENT GRID */
 
 .content-container {
