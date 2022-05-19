@@ -55,11 +55,11 @@ All images are from Wikipedia
 
 User story + target audience:
 
-Charolotte, fascinated with architecture...
+**Charolotte, fascinated with architecture...**
 
-She needs a way to compile and access all of her unique findings.
+**She needs a way to compile and access all of her unique findings.**
 
-Targeted audience:
+######Targeted audience:
 sightseers
 preservationists
 architects
@@ -68,6 +68,6 @@ cultural institutions
 
 Wireframes: 
 
-![Screenshot](crud-wireframes.png)
+![This is an image](public/images/crud-wireframes.png)
 
 
