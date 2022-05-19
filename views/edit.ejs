@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Achitecture Index</title> -->
-    <%- include ('./partials/head.ejs') %>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Document</title> -->
+  <%- include ('./partials/head.ejs') %>
 </head>
 <body>
+  <div class="wrapper">
     <header>
-        <%- include ('./partials/header.ejs') %>
+      <%- include ('./partials/header.ejs') %>
+      <div>
+        <button class="nav-button"><a class="text" href="/architecture">Back</a></button>
+      </div>
     </header>
-    <nav>
-        <button type="button" name="button" class = "button"><a class="text" href="/architecture">Go Back</a></button>
-      </nav>
-    <h1>Edit Architecture</h1>
-    <form  action="/architecture/<%=architecture._id%>?_method=PUT" method="POST">
-    Title of building: <input type="text" name="title" value="<%=architecture.title%>" required><br>
-    <br>
-    Name of architect: <input type="text" name="architectOne" value="<%=architecture.architectOne%>" required><br>
-    <br>
-  <!-- Difficulty: <input type="text" name="" value="" required><br>
-    <br>
-    Time: <input type="text" name="" value="" required><br>
-    <br>
-    Sets: <input type="text" name="" value="" required><br>
-    <br>
-    Reps: <input type="text" name="" value="" required><br>
-    <br>
-    Frequency: <input type="text" name="" value="" required><br> -->
-    <br>
-    <input type="submit" value="Submit Edit"><br>
-</form>
-    
+    <div class="edit-container">
+      <ul>
+        <li>
+          <h1>Edit Architecture</h1>
+          <br>
+      <form action="/architecture._id%>?_method=PUT" method="POST">
+        <label for="dayTag">Day visit</label>
+        <span class="checkbox"><input type="checkbox" name="dayTag" value="<%architecture.dayTag%>"></span><br>
+        <br>
+        <label for="dayTag">Overnight stay</label>
+        <span class="checkbox"><input type="checkbox" name="nightTag" value="<%architecture.nightTag%>"></span><br>
+        <br>
+        <input class="edit-input" type="text" name="title" value="<%architecture.title%>" placeholder="Name of building or site"required><br>
+        <input class="edit-input" type="text" name="architectOne" value="<%architecture.architectOne%>" placeholder="Name of Architect"required><br>
+        <input type="text" class="edit-input" name="architectTwo" value="<%architecture.architectTwo%>" placeholder="Add another Architect"><br>
+        <input type="text" class="edit-input" name="year" value="<%architecture.year%>" placeholder="Year"><br>
+        <input type="url" class="edit-input" pattern="https://.*" name="img" value="<%architecture.img%>" placeholder="https://www.copy-image-address.com/"><br>
+        <input type="text" class="edit-input" name="streetAddress" value="<%architecture.loc.streetAddress%>" placeholder="Street address"><br>
+        <input type="text" class="edit-input" name="city" value="<%architecture.loc.city%>" placeholder="City"><br>
+        <input type="text" class="edit-input" name="state" value="<%architecture.loc.state%>" placeholder="State"><br>
+        <input type="text" class="edit-input" name="postalCode" value="<%architecture.loc.postalCode%>" placeholder="Postcode"><br>
+        <input type="text" class="edit-input" name="country" value="<%architecture.loc.country%>" placeholder="Country"><br>
+        <input type="url" class="edit-input" name="link" value="<%architecture.loc.link%>" placeholder="http://www.architecture-site.com"><br>
+        <input type="number" class="edit-input" name="visits" value="<%architecture.visits%>" placeholder="Number of times visited"><br>
+        <input type="submit" class="edit-submit" value="Submit">
+      </form>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

@@ -8,12 +8,12 @@ body {
   margin: 0; 
   padding: 0; 
   font-family: 'Syne', sans-serif;
-  width: 100vh;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
   grid-template-areas: 
   "header header header header header header header header"
   "footer footer footer footer footer footer footer footer"; 
@@ -217,4 +217,33 @@ a {
   grid-column: 4 / span 6;
 
 }
-/* <span style='font-size:100px;'>&#128164;</span> zzzz emoji */
+
+/* EDIT PAGE */
+.edit-container {
+  margin-top: 32px;
+  display: grid;
+  grid-column: 1 / span 3;
+  margin-top: 0;
+}
+
+.edit-input {
+  background-color: rgb(246, 255, 185);
+  width: 600px;
+  height: 48px;
+  border: none;
+  margin-bottom: 24px;
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+}
+
+.edit-submit {
+  background-color: none;
+  background: none;
+  border: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  cursor: crosshair;
+}

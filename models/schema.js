@@ -13,8 +13,7 @@ const architectureSchema = new Schema ({
     link: {type: String},
     dayTag: {type: String},
     nightTag: {type: String},
-    visits: {type: Number},
-    Note: {type: String}
+    visits: {type: Number}
 })
 
 
