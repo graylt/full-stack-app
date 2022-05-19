@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const architectureSchema = new Schema ({
 
-    title: {type: String, required:true},
-    architectOne: {type: String, required: true},
+    title: {type: String},
+    architectOne: {type: String},
     architectTwo: {type: String},
     year: {type:String},
     img: [{type: String}],

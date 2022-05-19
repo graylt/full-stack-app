@@ -46,5 +46,33 @@ module.exports = [
     link: "capmoderne.com",
     dayTag: "☀",
     nightTag: "🛏"
+},
+{
+    title: "Les Arcs",
+    architectOne: "Charlotte Perriand",
+    year: "1968",
+    img: "https://upload.wikimedia.org/wikipedia/commons/d/dd/Arcs_1950.jpg",
+    loc: { 
+        streetAddress: "Les Arcs", 
+        city: "Bourg-Saint-Maurice", 
+        postalCode: "73700",
+        country: "France"
+    },
+    link: "lesarcs.com",
+    nightTag: "🛏"
+},
+{
+    title: "Villa Necchi Campiglio",
+    architectOne: "Piero Portaluppi",
+    year: "1932-35",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Villa_necchi_campiglio%2C_esterno_01.jpg/2560px-Villa_necchi_campiglio%2C_esterno_01.jpg",
+    loc: { 
+        streetAddress: "14 Via Mozart", 
+        city: "Milan", 
+        postalCode: "20122",
+        country: "Italy"
+    },
+    link: "fondoambiente.it",
+    dayTag: "☀"
 }
 ]

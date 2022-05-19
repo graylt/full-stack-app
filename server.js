@@ -105,6 +105,17 @@ app.put('/architecture/:id', (req,res) => {
       res.redirect('/architecture')
     })
   })
+
+   //2. show
+app.get('/architecture/:id', (req,res) => {
+    Schema.findById(req.params.id, (err,foundArchitecture) => { 
+      res.render('show.ejs', {
+        tabTitle: 'Architecture details',
+        architecture: foundArchitecture
+        // tags:foundArchitecture
+      })
+    })
+})
   
   // 6. edit
   app.get('/architecture/:id/edit', (req,res) => {
@@ -124,16 +135,6 @@ app.put('/architecture/:id', (req,res) => {
 // })
 // })
 
-//2. show
-app.get('/architecture/:id', (req,res) => {
-    Schema.findById(req.params.id, (err,foundArchitecture) => { 
-      res.render('show.ejs', {
-        tabTitle: 'Architecture details',
-        architecture: foundArchitecture
-        // tags:foundArchitecture
-      })
-    })
-})
 
  // Error / success
 // db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
